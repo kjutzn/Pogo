@@ -37,7 +37,7 @@ struct Strap: ParsableCommand {
                 try autoreleasepool {
                     let data = try Data(contentsOf: URL(fileURLWithPath: input))
                     let container = try TarContainer.open(container: data)
-                    NSLog("[POGO] Opened Container")
+                    NSLog("[POGO] Successfully opened Container")
                     for entry in container {
                         do {
                             var path = entry.info.name
